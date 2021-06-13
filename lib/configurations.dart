@@ -9,6 +9,7 @@ class Configurations {
   static String fontFamily = 'Gameboy';
   static Color consolePrimaryColor = Colors.red.shade900;
   static Color consoleSecondaryColor = Colors.red;
+  static Color consoleIconColor = Colors.white;
   static Color consoleFrameColor = Colors.black;
   static double consoleFrameWidth = 20.0;
 }
