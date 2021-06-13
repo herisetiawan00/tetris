@@ -54,14 +54,14 @@ class _LandingScreenState extends State<LandingScreen> {
       child: Column(
         children: [
           Padding(
-            padding: const EdgeInsets.symmetric(vertical: 16),
+            padding: const EdgeInsets.all(16),
             child: Center(
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Icon(Icons.arrow_back_ios_rounded),
-                  Text(currentGame?.replaceFirst('/', '') ?? ''),
-                  Icon(Icons.arrow_forward_ios_rounded),
+                  Text('<'),
+                  Text(currentGame?.replaceFirst('/', '').toUpperCase() ?? ''),
+                  Text('>'),
                 ],
               ),
             ),

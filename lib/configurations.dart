@@ -6,7 +6,7 @@ class Configurations {
   static double blockWidth = 15.0;
   static double opacityEnable = 1.0;
   static double opacityDisable = 0.25;
-  static String fontFamily = 'Gameboy';
+  static String fontFamily = 'Retro';
   static Color consolePrimaryColor = Colors.red.shade900;
   static Color consoleSecondaryColor = Colors.red;
   static Color consoleIconColor = Colors.white;
