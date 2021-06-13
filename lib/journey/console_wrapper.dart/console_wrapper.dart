@@ -15,6 +15,7 @@ class ConsoleWrapper extends StatelessWidget {
   final ButtonCallbackEntity? onPause;
   final ButtonCallbackEntity? onRetry;
   final ButtonCallbackEntity? onAction;
+  final ButtonCallbackEntity? onBack;
 
   const ConsoleWrapper({
     Key? key,
@@ -28,6 +29,7 @@ class ConsoleWrapper extends StatelessWidget {
     this.onPause,
     this.onRetry,
     this.onAction,
+    this.onBack,
   }) : super(key: key);
   @override
   Widget build(BuildContext context) {
@@ -112,6 +114,14 @@ class ConsoleWrapper extends StatelessWidget {
                       padding: const EdgeInsets.all(8.0),
                       callback: onRetry,
                       icon: Icons.refresh,
+                      size: 10,
+                      iconColor: Configurations.consoleIconColor,
+                      color: Configurations.consoleSecondaryColor,
+                    ),
+                    ConsoleButton(
+                      padding: const EdgeInsets.all(8.0),
+                      callback: onBack,
+                      icon: Icons.arrow_back_ios_new_rounded,
                       size: 10,
                       iconColor: Configurations.consoleIconColor,
                       color: Configurations.consoleSecondaryColor,

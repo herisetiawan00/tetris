@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tetr/configurations.dart';
-import 'package:tetr/journey/tetris/tetris_screen.dart';
+import 'package:tetr/journey/routes.dart';
 
 void main() {
   runApp(MyApp());
@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
         backgroundColor: Color(0xff9bbc0f),
         fontFamily: Configurations.fontFamily,
       ),
-      home: TetrisScreen(),
+      routes: Routes.getAll,
     );
   }
 }

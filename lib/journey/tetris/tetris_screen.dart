@@ -22,6 +22,12 @@ class _TetrisScreenState extends State<TetrisScreen> {
     super.initState();
   }
 
+  @override
+  void dispose() {
+    utils.timer?.cancel();
+    super.dispose();
+  }
+
   void requestRender() => setState(() {});
 
   @override
@@ -149,6 +155,9 @@ class _TetrisScreenState extends State<TetrisScreen> {
       ),
       onAction: ButtonCallbackEntity(
         onTap: utils.isGameOver || utils.isPaused ? null : utils.drop,
+      ),
+      onBack: ButtonCallbackEntity(
+        onTap: Navigator.of(context).pop,
       ),
     );
   }

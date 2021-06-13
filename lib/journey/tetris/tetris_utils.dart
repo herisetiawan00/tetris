@@ -103,10 +103,7 @@ class TetrisUtils {
     globalIndex
       ..indexX = indexX
       ..indexY = 0;
-    positioned = (globalKeys[globalIndex.indexY][globalIndex.indexX]
-            .currentContext!
-            .findRenderObject() as RenderBox)
-        .localToGlobal(Offset.zero);
+    positioned = globalPosition;
     block
       ..clear()
       ..addAll(_block);
@@ -116,11 +113,10 @@ class TetrisUtils {
     timer = dropper();
   }
 
-  Timer dropper([Duration? duration]) {
-    return Timer.periodic(duration ?? Duration(milliseconds: 400), (_) {
-      dropBlock(_.cancel, true);
-    });
-  }
+  Timer dropper([Duration? duration]) =>
+      Timer.periodic(duration ?? Duration(milliseconds: 400), (_) {
+        dropBlock(_.cancel, true);
+      });
 
   void onStartDrop() {
     timer?.cancel();
